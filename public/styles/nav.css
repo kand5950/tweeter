@@ -24,3 +24,11 @@ nav span:nth-child(2) {
   float:right;
   
 }
+
+nav i {
+  position: absolute;
+  color: red;
+  top: 3em;
+  float: right;
+  right:4.7em
+}
