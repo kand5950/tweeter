@@ -1,0 +1,15 @@
+header {
+  position: relative;
+  top: 120px;
+  height:400px;
+  width: 100%;
+  background-color: grey;
+
+}
+
+header div{
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
