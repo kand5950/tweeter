@@ -1,0 +1,40 @@
+.tweets {
+  margin: 5% auto;
+  border: 4px solid black;
+}
+
+.tweets img {
+  margin: 15px;
+  width: 70px;
+}
+
+
+.tweetName {
+  position: relative;
+  bottom: 1.5em;
+  font-weight: 600;
+}
+.tweetTag {
+  float:right;
+  margin: 40px;
+}
+
+.tweets p {
+  margin:15px;
+  border-bottom:4px solid black;
+}
+
+
+.tweets footer {
+  margin: 15px;
+  font-size: 0.7em;
+}
+
+.tweets .icons {
+  text-align:right;
+
+}
+
+.tweets footer i {
+  padding: 0 7px;
+}
