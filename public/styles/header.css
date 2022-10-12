@@ -1,4 +1,4 @@
-header {
+.profile {
   margin-top: 120px;
   height:400px;
   width: 100%;
@@ -8,8 +8,11 @@ header {
 
 }
 
-header div{
-  
+.headImg {
   display: flex;
   justify-content: center;
+}
+
+.headName {
+  text-align:center;
 }
