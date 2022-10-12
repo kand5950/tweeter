@@ -40,7 +40,7 @@ $(document).ready(function() {
     let tweet = `
   <article>
     <header>
-      <img class="profile" src="${data.user.avatars}" alt="avatar"> 
+      <img src="${data.user.avatars}" alt="avatar"> 
       <span class="tweetName">${data.user.name}</span>
       <span class="tweetTag">${data.user.handle}</span>
     </header>
