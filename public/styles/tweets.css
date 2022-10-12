@@ -36,5 +36,14 @@
 }
 
 .tweets footer i {
-  padding: 0 7px;
+  padding: 0 10px;
+
+}
+
+.tweets:hover {
+  box-shadow: 10px 7px grey;
+}
+
+.tweets footer i:hover {
+  color: orange;
 }
