@@ -1,7 +1,18 @@
 $(document).ready(function() {
- 
-    $('.new-tweet textarea').on('keyup', function() {
-      console.log($(this).val());
+  let max = 140;
+
+    $('.new-tweet textarea').on('keydown', function() {
+      const remainingChars = max - $(this).val().length;
+      const chars = $(this).siblings('.counter');
+
+      chars.text(remainingChars);
+
+      if (remainingChars < 0 ) {
+        chars.css("color", "red");
+      } else {
+        chars.css("color", "black");
+      }
+
     })
 
 });
