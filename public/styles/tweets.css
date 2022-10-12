@@ -3,18 +3,23 @@
   border: 4px solid black;
 }
 
+.tweets:hover {
+  box-shadow: 10px 7px grey;
+}
+
 .tweets img {
   margin: 15px;
   width: 70px;
+  height: 70px;
 }
 
 
-.tweetName {
+.tweets .tweetName {
   position: relative;
   bottom: 1.5em;
   font-weight: 600;
 }
-.tweetTag {
+.tweets .tweetTag {
   float:right;
   margin: 40px;
 }
@@ -40,9 +45,7 @@
 
 }
 
-.tweets:hover {
-  box-shadow: 10px 7px grey;
-}
+
 
 .tweets footer i:hover {
   color: orange;
