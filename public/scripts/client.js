@@ -25,8 +25,13 @@ const tweetData = [
 
 $(document).ready(function() {
   
-  $('.new-tweet form').submit(event => {
+  $('.new-tweet form').submit(function (event) {
     event.preventDefault();
+    $.ajax({
+      url: `/tweets`,
+      data: $(this).serialize(),
+      method: "POST"
+    })
   })
 
   const renderTweets = (tweets) => {
