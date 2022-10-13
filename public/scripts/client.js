@@ -3,10 +3,8 @@ $(document).ready(function() {
   const loadTweets = () => {
     $.ajax(`/tweets`,{
       method: "GET",
-      success: function(tweetData) {
-        renderTweets(tweetData)
-      }
-    });
+    })
+    .then(tweets => renderTweets(tweets));
   }
   loadTweets();
 
@@ -41,7 +39,7 @@ $(document).ready(function() {
     </header>
     <p>${data.content.text}</p>
     <footer>
-      <span class="data">${data.created_at}</span>
+      <span class="data">${timeago.format(data.created_at)}</span>
       <div class="icons">
       <i class="fa-solid fa-heart"></i>
       <i class="fa-solid fa-retweet"></i>
