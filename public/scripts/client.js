@@ -27,8 +27,8 @@ $(document).ready(function() {
   
   $('.new-tweet form').submit(function (event) {
     event.preventDefault();
-    $.ajax({
-      url: `/tweets`,
+    //serialize the new-tweet data form input and submit post server
+    $.ajax(`/tweets`,{
       data: $(this).serialize(),
       method: "POST"
     })
