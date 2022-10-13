@@ -11,6 +11,8 @@ $(document).ready(function() {
   
   $('.new-tweet form').submit(function (event) {
     event.preventDefault();
+    
+    const inputTextLength = $(this).children("textarea").val().length;
     //serialize the new-tweet data form input and submit post server
     $.ajax(`/tweets`,{
       data: $(this).serialize(),
@@ -30,7 +32,7 @@ $(document).ready(function() {
   };
 
   const createTweetElement = (data) => {
-    let tweet = `
+    let tweets = `
   <article>
     <header>
       <img src="${data.user.avatars}" alt="avatar"> 
@@ -47,7 +49,6 @@ $(document).ready(function() {
       </div>
     </footer>
   </article>`;
-    return tweet;
+    return tweets;
   };
-  renderTweets(tweetData);
 });
