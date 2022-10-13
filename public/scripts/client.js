@@ -24,6 +24,10 @@ const tweetData = [
 ];
 
 $(document).ready(function() {
+  
+  $('.new-tweet form').submit(event => {
+    event.preventDefault();
+  })
 
   const renderTweets = (tweets) => {
   // loops through tweets
@@ -33,7 +37,7 @@ $(document).ready(function() {
       // takes return value and appends it to the tweets container
       $('.tweets').append(tweetContainer);
 
-    }
+    } 
   };
 
   const createTweetElement = (data) => {
@@ -55,10 +59,6 @@ $(document).ready(function() {
     </footer>
   </article>`;
     return tweet;
-
   };
-
-
   renderTweets(tweetData);
-
 });
