@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
   //GET method using ajax and jquery to renderTweets from /tweets to the page
   const loadTweets = () => {
     $.ajax(`/tweets`,{
@@ -45,17 +46,24 @@ $(document).ready(function() {
     } 
   };
 
+  //Preventing XSS with escape function
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   const createTweetElement = (data) => {
     let tweets = `
   <article>
     <header>
-      <img src="${data.user.avatars}" alt="avatar"> 
-      <span class="tweetName">${data.user.name}</span>
-      <span class="tweetTag">${data.user.handle}</span>
+      <img src="${escape(data.user.avatars)}" alt="avatar"> 
+      <span class="tweetName">${escape(data.user.name)}</span>
+      <span class="tweetTag">${escape(data.user.handle)}</span>
     </header>
-    <p>${data.content.text}</p>
+    <p>${escape(data.content.text)}</p>
     <footer>
-      <span class="data">${timeago.format(data.created_at)}</span>
+      <span class="data">${escape(timeago.format(data.created_at))}</span>
       <div class="icons">
       <i class="fa-solid fa-heart"></i>
       <i class="fa-solid fa-retweet"></i>
