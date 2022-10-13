@@ -11,13 +11,21 @@ $(document).ready(function() {
   
   $('.new-tweet form').submit(function (event) {
     event.preventDefault();
-    
+
     const inputTextLength = $(this).children("textarea").val().length;
+
+    if (inputTextLength > 140) {
+      $('.counter').text("Over 140 character limit!").css("color", "red");
+
+    } else if (inputTextLength === 0) {
+      $('.counter').text("You cannot post an empty text").css("color", "red");
+    } else {
     //serialize the new-tweet data form input and submit post server
     $.ajax(`/tweets`,{
       data: $(this).serialize(),
       method: "POST"
     })
+  }
   })
 
   const renderTweets = (tweets) => {
