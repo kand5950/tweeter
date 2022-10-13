@@ -8,7 +8,7 @@ $(document).ready(function() {
   }
   loadTweets();
 
-  
+  //Validation first before using POST to submit tweet to server
   $('.new-tweet form').submit(function (event) {
     event.preventDefault();
 
@@ -23,11 +23,17 @@ $(document).ready(function() {
     //serialize the new-tweet data form input and submit post server
     $.ajax(`/tweets`,{
       data: $(this).serialize(),
-      method: "POST"
+      method: "POST",
+      success: function(tweets) {
+        $('.tweets').empty();
+        loadTweets();
+        $('.new-tweet textarea').val('');
+      }
     })
   }
   })
 
+  //Renders an arguement of tweets and posts it in tweet container
   const renderTweets = (tweets) => {
   // loops through tweets
     for (let tweet of tweets) {
