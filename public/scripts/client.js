@@ -20,6 +20,7 @@ $(document).ready(function() {
 
     } else if (inputTextLength === 0) {
       $('.counter').text("You cannot post an empty text").css("color", "red");
+
     } else {
     //serialize the new-tweet data form input and submit post server
     $.ajax(`/tweets`,{
@@ -36,6 +37,8 @@ $(document).ready(function() {
 
   //Renders an arguement of tweets and posts it in tweet container
   const renderTweets = (tweets) => {
+  //order of tweets reversed
+  tweets.reverse();
   // loops through tweets
     for (let tweet of tweets) {
     // calls createTweetElement for each tweet
