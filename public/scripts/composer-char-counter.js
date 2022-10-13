@@ -1,7 +1,7 @@
 $(document).ready(function() {
   let max = 140;
 
-    $('.new-tweet textarea').on('keydown', function() {
+    $('.new-tweet textarea').on('keyup', function() {
       const remainingChars = max - $(this).val().length;
       const chars = $(this).siblings('.counter');
 
