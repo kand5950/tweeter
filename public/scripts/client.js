@@ -14,12 +14,17 @@ $(document).ready(function() {
     event.preventDefault();
 
     const inputTextLength = $(this).children("textarea").val().length;
+    const $errorMsg = $(this).children("h5");
+    $errorMsg.slideUp(60);
 
     if (inputTextLength > 140) {
-      $('.counter').text("Over 140 character limit!").css("color", "red");
+      $('.new-tweet h5 span').text("Over 140 character limit!");
+      $errorMsg.slideDown(350);
 
     } else if (inputTextLength === 0) {
-      $('.counter').text("You cannot post an empty text").css("color", "red");
+      $('.new-tweet h5 span').text("You cannot post an empty text");
+      $errorMsg.slideDown(350);
+    
 
     } else {
     //serialize the new-tweet data form input and submit post server
