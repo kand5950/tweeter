@@ -35,6 +35,7 @@ $(document).ready(function() {
           $('.tweets').empty();
           loadTweets();
           $('.new-tweet textarea').val('');
+          $('.counter').text('140');
         }
       });
     }
