@@ -64,22 +64,22 @@ $(document).ready(function() {
 
   const createTweetElement = (data) => {
     let tweets = `
-  <article>
-    <header>
-      <img src="${escape(data.user.avatars)}" alt="avatar"> 
-      <span class="tweetName">${escape(data.user.name)}</span>
-      <span class="tweetTag">${escape(data.user.handle)}</span>
-    </header>
-    <p>${escape(data.content.text)}</p>
-    <footer>
-      <span class="data">${escape(timeago.format(data.created_at))}</span>
-      <div class="icons">
-      <i class="fa-solid fa-heart"></i>
-      <i class="fa-solid fa-retweet"></i>
-      <i class="fa-solid fa-flag"></i>
-      </div>
-    </footer>
-  </article>`;
+      <article>
+        <header>
+          <img src="${escape(data.user.avatars)}" alt="avatar"> 
+          <span class="tweetName">${escape(data.user.name)}</span>
+          <span class="tweetTag">${escape(data.user.handle)}</span>
+        </header>
+        <p>${escape(data.content.text)}</p>
+        <footer>
+          <span class="data">${escape(timeago.format(data.created_at))}</span>
+          <div class="icons">
+          <i class="fa-solid fa-heart"></i>
+          <i class="fa-solid fa-retweet"></i>
+          <i class="fa-solid fa-flag"></i>
+          </div>
+        </footer>
+      </article>`;
     return tweets;
   };
 });
