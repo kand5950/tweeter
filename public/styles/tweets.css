@@ -8,23 +8,23 @@
   box-shadow: 10px 7px grey;
 }
 
+
+.tweets header {
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
 .tweets img {
   margin: 15px;
-  width: 70px;
   height: 70px;
   background-color: none;
 }
 
-
-.tweets .tweetName {
-  position: relative;
-  bottom: 1.5em;
-  font-weight: 600;
-  z-index: -1;
-}
 .tweets .tweetTag {
-  float:right;
-  margin: 40px;
+  margin-left: auto;
+  margin-right: 2em;
 }
 
 .tweets p {
