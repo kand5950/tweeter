@@ -34,12 +34,13 @@ body {
 
  @media only screen and (min-width: 1024px) {
   .profile {
-    width: 33.3%;
+    width: 27%;
+    margin: 15vh 2% auto;
     float: left;
   }
 
   main {
-    width: 65%;
+    width: 67%;
     float: right;
     margin: 10% auto;
     padding: 17px;
