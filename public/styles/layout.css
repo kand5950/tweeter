@@ -31,14 +31,16 @@ body {
   padding: 0;
  }
  
-
+ /* Desktop responsive layout any screen width below already implemented */
  @media only screen and (min-width: 1024px) {
+  /* Move profile header to left */
   .profile {
     width: 27%;
     margin: 15vh 2% auto;
     float: left;
   }
 
+  /* Move tweet container and new tweet to right */
   main {
     width: 67%;
     float: right;

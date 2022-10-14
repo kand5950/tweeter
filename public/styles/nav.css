@@ -1,3 +1,4 @@
+/* Nav bar */
 nav {
   height: 120px;
   width: 100%;
@@ -9,16 +10,19 @@ nav {
   
 }
 
+/* Tweeter logo */
 .logo {
   font-family: Bungee, sans-serif;
   float:left;
 }
 
+/* Write a new tweet */
 nav span:nth-child(2) {
   font-family: Source Sans Pro, sans-serif;
   float:right;
 }
 
+/* Button below */
 nav i {
   position: absolute;
   color: red;

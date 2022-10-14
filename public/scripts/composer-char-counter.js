@@ -1,6 +1,7 @@
 $(document).ready(function() {
   let max = 140;
 
+  //Character counter using jQuery
   $('.new-tweet textarea').on('keyup', function() {
     const remainingChars = max - $(this).val().length;
     const chars = $(this).siblings('.counter');

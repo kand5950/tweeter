@@ -1,53 +1,61 @@
+/* Tweet container */
 .tweets article {
   margin: 2% auto;
   padding: 0;
   border: 3px solid black;
 }
 
+/* Hovering over tweet container adds box shadow */
 .tweets article:hover {
   box-shadow: 10px 7px grey;
 }
 
-
+/* Tweet containter header which includes img name and tag */
 .tweets header {
   display:flex;
   align-items: center;
   justify-content: space-between;
 }
 
+/* Tweet container user image */
 .tweets img {
   margin: 15px;
   height: 70px;
   background-color: none;
 }
 
+/* Tweet container usertag */
 .tweets .tweetTag {
   margin-left: auto;
   margin-right: 2em;
 }
 
+/* Tweet container tweet sentence */
 .tweets p {
   margin:15px;
   border-bottom:4px solid black;
   word-wrap: break-word;
 }
 
-
+/* Tweet container footer including time ago and icons */
 .tweets footer {
   margin: 15px;
   font-size: 0.7em;
 }
 
+/* Tweet container icons */
 .tweets .icons {
   text-align:right;
 
 }
 
+/* Tweet container single icons */
 .tweets footer i {
   padding: 0 10px;
 
 }
 
+/* Hovering over twitter incons changes color */
 .tweets footer i:hover {
   color: orange;
 }

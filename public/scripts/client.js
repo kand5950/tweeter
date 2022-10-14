@@ -62,6 +62,7 @@ $(document).ready(function() {
     return div.innerHTML;
   };
 
+  //Create a HTML skeleton for a new Tweet
   const createTweetElement = (data) => {
     let tweets = `
       <article>
