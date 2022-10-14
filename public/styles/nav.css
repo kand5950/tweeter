@@ -12,14 +12,11 @@ nav {
 .logo {
   font-family: Bungee, sans-serif;
   float:left;
-  
-
 }
 
 nav span:nth-child(2) {
   font-family: Source Sans Pro, sans-serif;
   float:right;
-  
 }
 
 nav i {
