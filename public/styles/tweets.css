@@ -30,6 +30,7 @@
 .tweets p {
   margin:15px;
   border-bottom:4px solid black;
+  word-wrap: break-word;
 }
 
 
