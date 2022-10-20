@@ -4,9 +4,28 @@ $(document).ready(function() {
   const loadTweets = () => {
     $.ajax(`/tweets`,{
       method: "GET",
-    })
-      .then(tweets => renderTweets(tweets));
+      success: tweets => renderTweets(tweets)
+    });
   };
+
+  //Renders an arguement of tweets and posts it in tweet container
+  const renderTweets = (tweets) => {
+    tweets.reverse();
+    $('.tweets').empty();
+    for (let tweet of tweets) {
+      let tweetContainer = createTweetElement(tweet);
+      $('.tweets').append(tweetContainer);
+  
+    }
+  };
+
+  //Preventing XSS with escape function
+  const escape = function(str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+  
   loadTweets();
 
   //Validation first before using POST to submit tweet to server
@@ -27,13 +46,11 @@ $(document).ready(function() {
     
 
     } else {
-    
-      //serialize the new-tweet data form input and submit post server
+    //serialize the new-tweet data form input and submit post server
       $.ajax(`/tweets`,{
         data: $(this).serialize(),
         method: "POST",
-        success: function(tweets) {
-          $('.tweets').empty();
+        success: function() {
           loadTweets();
           $('.new-tweet textarea').val('');
           $('.counter').text('140');
@@ -41,23 +58,6 @@ $(document).ready(function() {
       });
     }
   });
-
-  //Renders an arguement of tweets and posts it in tweet container
-  const renderTweets = (tweets) => {
-    tweets.reverse();
-    for (let tweet of tweets) {
-      let tweetContainer = createTweetElement(tweet);
-      $('.tweets').append(tweetContainer);
-
-    }
-  };
-
-  //Preventing XSS with escape function
-  const escape = function(str) {
-    let div = document.createElement("div");
-    div.appendChild(document.createTextNode(str));
-    return div.innerHTML;
-  };
 
   //Create a HTML skeleton for a new Tweet
   const createTweetElement = (data) => {
