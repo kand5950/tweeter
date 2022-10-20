@@ -27,7 +27,8 @@ $(document).ready(function() {
     
 
     } else {
-    //serialize the new-tweet data form input and submit post server
+    
+      //serialize the new-tweet data form input and submit post server
       $.ajax(`/tweets`,{
         data: $(this).serialize(),
         method: "POST",
@@ -43,13 +44,9 @@ $(document).ready(function() {
 
   //Renders an arguement of tweets and posts it in tweet container
   const renderTweets = (tweets) => {
-  //order of tweets reversed
     tweets.reverse();
-    // loops through tweets
     for (let tweet of tweets) {
-    // calls createTweetElement for each tweet
       let tweetContainer = createTweetElement(tweet);
-      // takes return value and appends it to the tweets container
       $('.tweets').append(tweetContainer);
 
     }

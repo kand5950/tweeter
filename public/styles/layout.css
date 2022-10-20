@@ -33,6 +33,7 @@ body {
  
  /* Desktop responsive layout any screen width below already implemented */
  @media only screen and (min-width: 1024px) {
+  
   /* Move profile header to left */
   .profile {
     width: 27%;
